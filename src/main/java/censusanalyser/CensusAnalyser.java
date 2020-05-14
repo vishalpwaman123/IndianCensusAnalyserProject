@@ -11,7 +11,7 @@ import java.util.Iterator;
 import java.util.stream.StreamSupport;
 
 public class CensusAnalyser {
-    public int loadIndiaCensusData(String csvFilePath) throws CensusAnalyserException {
+    public int loadIndiaCensusData(String csvFilePath) throws CensusAnalyserException, CSVBuildException {
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath));){
             ICSVBuilder csvBuilder= CSVBuilderFactor.createCSVBuilder();
             Iterator<IndiaCensusCSV> censusCSVIterator = new OpenCSVBuilder().getCSVFileIterator(reader, IndiaCensusCSV.class);
@@ -19,10 +19,12 @@ public class CensusAnalyser {
         } catch (IOException e) {
             throw new CensusAnalyserException(e.getMessage(),
                     CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
+        } catch (CSVBuildException e) {
+            throw new CSVBuildException(e.getMessage(),e.type.name());
         }
     }
 
-    public int loadIndiaStateCode(String csvFilePath) throws CensusAnalyserException {
+    public int loadIndiaStateCode(String csvFilePath) throws CensusAnalyserException, CSVBuildException {
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath));){
             ICSVBuilder csvBuilder= CSVBuilderFactor.createCSVBuilder();
             Iterator<IndianStateCodeCsv> stateCSVIterator = new OpenCSVBuilder().getCSVFileIterator(reader, IndianStateCodeCsv.class);
@@ -34,6 +36,8 @@ public class CensusAnalyser {
                     CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
         } catch (RuntimeException e) {
             e.printStackTrace();
+        }catch (CSVBuildException e) {
+            throw new CSVBuildException(e.getMessage(),e.type.name());
         }
         return 0;
     }
