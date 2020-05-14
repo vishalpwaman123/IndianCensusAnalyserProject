@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="censusanalyser.CensusAnalyserTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-05-14T10:55:11" hostname="kali" time="0.222">
+<testsuite name="censusanalyser.CensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-14T21:30:04" hostname="kali" time="0.24">
   <properties/>
-  <testcase name="givenIndianCensusCSVFileReturnsCorrectRecords" classname="censusanalyser.CensusAnalyserTest" time="0.166"/>
-  <testcase name="givenIndianStateCode_CSVFile_ReturnsCorrectRecords" classname="censusanalyser.CensusAnalyserTest" time="0.049"/>
-  <testcase name="givenIndiaCensusData_WithWrongFile_ShouldThrowException" classname="censusanalyser.CensusAnalyserTest" time="0.005"/>
+  <testcase name="givenIndianStateCode_CSVFile_ReturnsCorrectRecords" classname="censusanalyser.CensusAnalyserTest" time="0.24"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
