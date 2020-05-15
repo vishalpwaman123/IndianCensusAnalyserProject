@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c80ee4f-b49f-4760-94c9-81f9af2ef2aa" name="Default Changelist" comment=" Refactored. Code and Programmed CSV Builder for Interface to address to Open Close Principle">
-      <change afterPath="$PROJECT_DIR$/src/main/java/censusanalyser/CSVBuildException.java" afterDir="false" />
+    <list default="true" id="9c80ee4f-b49f-4760-94c9-81f9af2ef2aa" name="Default Changelist" comment="Refactored. Code to Encapsulate all changes within the CSV Builder.">
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -15,7 +14,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/CensusAnalyser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/censusanalyser/CensusAnalyser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/censusanalyser/CensusAnalyserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/censusanalyser/CensusAnalyserTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/censusanalyser.CensusAnalyserTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/censusanalyser.CensusAnalyserTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/censusanalyser.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/censusanalyser.html" afterDir="false" />
@@ -24,7 +22,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/censusanalyser/CensusAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/censusanalyser/CensusAnalyser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/censusanalyser/ICSVBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/censusanalyser/ICSVBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/censusanalyser/OpenCSVBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/censusanalyser/OpenCSVBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/censusanalyser/CensusAnalyserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/censusanalyser/CensusAnalyserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,13 +191,14 @@
     <MESSAGE value=" Refactored. Code to handle DRY violation at the Iterator Count." />
     <MESSAGE value="Refactored. Code to handle Single Responsibility by separating the OpenCSVBuilder" />
     <MESSAGE value=" Refactored. Code and Programmed CSV Builder for Interface to address to Open Close Principle" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Refactored. Code and Programmed CSV Builder for Interface to address to Open Close Principle" />
+    <MESSAGE value="Refactored. Code to Encapsulate all changes within the CSV Builder." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored. Code to Encapsulate all changes within the CSV Builder." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="404" y="105" width="558" height="596" key="#com.intellij.ide.util.MemberChooser" timestamp="1589436608136">
+    <state x="404" y="105" width="558" height="596" key="#com.intellij.ide.util.MemberChooser" timestamp="1589521749509">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state x="404" y="105" width="558" height="596" key="#com.intellij.ide.util.MemberChooser/0.31.1366.737@0.31.1366.737" timestamp="1589436608136" />
+    <state x="404" y="105" width="558" height="596" key="#com.intellij.ide.util.MemberChooser/0.31.1366.737@0.31.1366.737" timestamp="1589521749509" />
     <state x="466" y="160" width="434" height="487" key="FileChooserDialogImpl" timestamp="1589435676093">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
@@ -217,22 +215,22 @@
       <screen x="0" y="31" width="1366" height="737" />
     </state>
     <state x="178" y="118" width="717" height="650" key="Github.UntrackedFilesDialog/0.31.1366.737@0.31.1366.737" timestamp="1589434297972" />
-    <state width="1320" height="173" key="GridCell.Tab.0.bottom" timestamp="1589499423483">
+    <state width="1320" height="173" key="GridCell.Tab.0.bottom" timestamp="1589523033053">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1320" height="173" key="GridCell.Tab.0.bottom/0.31.1366.737@0.31.1366.737" timestamp="1589499423483" />
-    <state width="1320" height="173" key="GridCell.Tab.0.center" timestamp="1589499423481">
+    <state width="1320" height="173" key="GridCell.Tab.0.bottom/0.31.1366.737@0.31.1366.737" timestamp="1589523033053" />
+    <state width="1320" height="173" key="GridCell.Tab.0.center" timestamp="1589523033052">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1320" height="173" key="GridCell.Tab.0.center/0.31.1366.737@0.31.1366.737" timestamp="1589499423481" />
-    <state width="1320" height="173" key="GridCell.Tab.0.left" timestamp="1589499423481">
+    <state width="1320" height="173" key="GridCell.Tab.0.center/0.31.1366.737@0.31.1366.737" timestamp="1589523033052" />
+    <state width="1320" height="173" key="GridCell.Tab.0.left" timestamp="1589523033051">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1320" height="173" key="GridCell.Tab.0.left/0.31.1366.737@0.31.1366.737" timestamp="1589499423481" />
-    <state width="1320" height="173" key="GridCell.Tab.0.right" timestamp="1589499423482">
+    <state width="1320" height="173" key="GridCell.Tab.0.left/0.31.1366.737@0.31.1366.737" timestamp="1589523033051" />
+    <state width="1320" height="173" key="GridCell.Tab.0.right" timestamp="1589523033052">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1320" height="173" key="GridCell.Tab.0.right/0.31.1366.737@0.31.1366.737" timestamp="1589499423482" />
+    <state width="1320" height="173" key="GridCell.Tab.0.right/0.31.1366.737@0.31.1366.737" timestamp="1589523033052" />
     <state width="1320" height="216" key="GridCell.Tab.1.bottom" timestamp="1589445679017">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
@@ -253,10 +251,10 @@
       <screen x="0" y="31" width="1366" height="737" />
     </state>
     <state x="172" y="31" key="SettingsEditor/0.31.1366.737@0.31.1366.737" timestamp="1589433725000" />
-    <state x="278" y="138" width="810" height="531" key="Vcs.Push.Dialog.v2" timestamp="1589493481850">
+    <state x="278" y="138" width="810" height="531" key="Vcs.Push.Dialog.v2" timestamp="1589500158686">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state x="278" y="138" width="810" height="531" key="Vcs.Push.Dialog.v2/0.31.1366.737@0.31.1366.737" timestamp="1589493481850" />
+    <state x="278" y="138" width="810" height="531" key="Vcs.Push.Dialog.v2/0.31.1366.737@0.31.1366.737" timestamp="1589500158686" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1589435476231">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
