@@ -15,6 +15,20 @@ public class CensusAnalyserTest {
     private static final String INDIAN_STATE_CSV_FILE_PATH_WRONG_EXTENSION_TYPE = "./src/test/resources/IndiaStateCode.png";
     private static final String INDIAN_CENSUS_CSV_WRONG_DELIMITER = "./src/test/resources/IndiaStateCensusDataWrongDelimiter.csv";
 
+    @Test
+    public void givenIndiaCensusData_WhenWrongDelimiter_shouldThrowCustomException() {
+        try {
+            CensusAnalyser censusAnalyser = new CensusAnalyser();
+            censusAnalyser.loadIndiaCensusData(INDIAN_CENSUS_CSV_WRONG_DELIMITER);
+        } catch (CensusAnalyserException e) {
+            Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM,e.type);
+        } catch (CSVBuildException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
 
     @Test
     public void givenIndiaCensusData_WhenCorrect_butTypeIncorrectShouldThrowCustomException() {
