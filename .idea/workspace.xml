@@ -86,7 +86,7 @@
       <recent name="censusanalyser" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CensusAnalyserTest.givenIndiaCensusData_WhenWrongDelimiter_shouldThrowCustomException">
+  <component name="RunManager" selected="Gradle.CensusAnalyserTest.givenIndiaCensusData_WithWrongHeader_ShouldThrowException">
     <configuration name="CensusAnalyserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -99,25 +99,6 @@
         <option name="taskNames">
           <list>
             <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CensusAnalyserTest.givenIndiaCensusData_SortedOnState_ShouldReturnSortedResult" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;censusanalyser.CensusAnalyserTest.givenIndiaCensusData_SortedOnState_ShouldReturnSortedResult&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
             <option value=":test" />
           </list>
         </option>
@@ -164,6 +145,25 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="CensusAnalyserTest.givenIndiaCensusData_WithWrongHeader_ShouldThrowException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;censusanalyser.CensusAnalyserTest.givenIndiaCensusData_WithWrongHeader_ShouldThrowException&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="CensusAnalyserTest.givenIndianCensusCSVFileReturnsCorrectRecords" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -186,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CensusAnalyserTest.givenIndiaCensusData_WithWrongHeader_ShouldThrowException" />
         <item itemvalue="Gradle.CensusAnalyserTest.givenIndiaCensusData_WhenWrongDelimiter_shouldThrowCustomException" />
         <item itemvalue="Gradle.CensusAnalyserTest.givenIndiaCensusData_WhenCorrect_butTypeIncorrectShouldThrowCustomException" />
         <item itemvalue="Gradle.CensusAnalyserTest" />
         <item itemvalue="Gradle.CensusAnalyserTest.givenIndianCensusCSVFileReturnsCorrectRecords" />
-        <item itemvalue="Gradle.CensusAnalyserTest.givenIndiaCensusData_SortedOnState_ShouldReturnSortedResult" />
       </list>
     </recent_temporary>
   </component>
