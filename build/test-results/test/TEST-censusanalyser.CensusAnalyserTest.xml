@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="censusanalyser.CensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-17T08:54:38" hostname="kali" time="0.221">
+<testsuite name="censusanalyser.CensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-17T08:57:11" hostname="kali" time="0.189">
   <properties/>
-  <testcase name="givenIndianStateCensusCsv_whenSortedOnDensity_shouldReturnShortedResult" classname="censusanalyser.CensusAnalyserTest" time="0.221"/>
+  <testcase name="givenIndianStateCensusCsv_whenSortedOnStateArea_shouldReturnShortedResult" classname="censusanalyser.CensusAnalyserTest" time="0.189"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
