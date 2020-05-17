@@ -69,7 +69,7 @@ public class CensusAnalyser {
 
 
     public String getStateWiseSortedCensusData() throws CensusAnalyserException {
-        
+
         if (censusList == null || censusList.size() == 0) {
             throw new CensusAnalyserException("No Census Data", CensusAnalyserException.ExceptionType.NO_CENSUS_DATA);
 
@@ -94,7 +94,6 @@ public class CensusAnalyser {
 
 
 }
-
 
 
 

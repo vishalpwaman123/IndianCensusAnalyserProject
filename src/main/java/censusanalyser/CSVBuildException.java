@@ -15,8 +15,8 @@ public class CSVBuildException extends Exception {
     }
 
     public CSVBuildException(String message, String name) {
-            super(message);
-            this.type=ExceptionType.valueOf(name);
+        super(message);
+        this.type=ExceptionType.valueOf(name);
     }
 
 
