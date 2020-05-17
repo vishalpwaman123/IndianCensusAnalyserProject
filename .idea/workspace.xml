@@ -19,8 +19,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c80ee4f-b49f-4760-94c9-81f9af2ef2aa" name="Default Changelist" comment="added Indian State Census Csv when Sorted On Population should Return shorted Result">
+    <list default="true" id="9c80ee4f-b49f-4760-94c9-81f9af2ef2aa" name="Default Changelist" comment="Added analyser to report indian state census data in a jason format as per area">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/censusanalyser/CensusAnalyserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/censusanalyser/CensusAnalyserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/censusanalyser.CensusAnalyserTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/censusanalyser.CensusAnalyserTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/censusanalyser.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/censusanalyser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-censusanalyser.CensusAnalyserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-censusanalyser.CensusAnalyserTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/censusanalyser/CensusAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/censusanalyser/CensusAnalyser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/censusanalyser/CensusAnalyserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/censusanalyser/CensusAnalyserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +88,7 @@
       <recent name="censusanalyser" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CensusAnalyserTest.givenIndianStateCensusCsv_whenSortedOnDensity_shouldReturnShortedResult">
+  <component name="RunManager" selected="Gradle.CensusAnalyserTest.givenIndianStateCensusCsv_whenSortedOnPopulation_shouldReturnShortedResult">
     <configuration name="CensusAnalyserTest.givenIndiaCensusData_SortedOnState_ShouldReturnSortedResult" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -131,6 +146,25 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="CensusAnalyserTest.givenIndianStateCensusCsv_whenSortedOnStateArea_shouldReturnShortedResult" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;censusanalyser.CensusAnalyserTest.givenIndianStateCensusCsv_whenSortedOnStateArea_shouldReturnShortedResult&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="CensusAnalyserTest.givenIndianStateCodeCsv_whenSortedOnStateCode_shouldReturnShortedResult" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -150,32 +184,13 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CensusAnalyserTest.givenIndianStateCsv_WhenCorrect_butTypeIncorrectShouldThrowCustomException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;censusanalyser.CensusAnalyserTest.givenIndianStateCsv_WhenCorrect_butTypeIncorrectShouldThrowCustomException&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CensusAnalyserTest.givenIndianStateCensusCsv_whenSortedOnDensity_shouldReturnShortedResult" />
         <item itemvalue="Gradle.CensusAnalyserTest.givenIndianStateCensusCsv_whenSortedOnPopulation_shouldReturnShortedResult" />
+        <item itemvalue="Gradle.CensusAnalyserTest.givenIndianStateCensusCsv_whenSortedOnStateArea_shouldReturnShortedResult" />
+        <item itemvalue="Gradle.CensusAnalyserTest.givenIndianStateCensusCsv_whenSortedOnDensity_shouldReturnShortedResult" />
         <item itemvalue="Gradle.CensusAnalyserTest.givenIndianStateCodeCsv_whenSortedOnStateCode_shouldReturnShortedResult" />
         <item itemvalue="Gradle.CensusAnalyserTest.givenIndiaCensusData_SortedOnState_ShouldReturnSortedResult" />
-        <item itemvalue="Gradle.CensusAnalyserTest.givenIndianStateCsv_WhenCorrect_butTypeIncorrectShouldThrowCustomException" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +234,9 @@
     <MESSAGE value="Added. Code and Test case for sorting indianStateData by State Name." />
     <MESSAGE value="Added created a map insted of List in indian cences csv" />
     <MESSAGE value="added Indian State Census Csv when Sorted On Population should Return shorted Result" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Indian State Census Csv when Sorted On Population should Return shorted Result" />
+    <MESSAGE value="Added analyser to report indian state census data in a jason format as per state dencity" />
+    <MESSAGE value="Added analyser to report indian state census data in a jason format as per area" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added analyser to report indian state census data in a jason format as per area" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="31" key="#Project_Structure" timestamp="1589700399245">
@@ -246,54 +263,54 @@
       <screen x="0" y="31" width="1366" height="737" />
     </state>
     <state x="178" y="118" width="717" height="650" key="Github.UntrackedFilesDialog/0.31.1366.737@0.31.1366.737" timestamp="1589434297972" />
-    <state width="1320" height="127" key="GridCell.Tab.0.bottom" timestamp="1589705350504">
+    <state width="1320" height="127" key="GridCell.Tab.0.bottom" timestamp="1589713595162">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1320" height="127" key="GridCell.Tab.0.bottom/0.31.1366.737@0.31.1366.737" timestamp="1589705350504" />
-    <state width="1320" height="127" key="GridCell.Tab.0.center" timestamp="1589705350500">
+    <state width="1320" height="127" key="GridCell.Tab.0.bottom/0.31.1366.737@0.31.1366.737" timestamp="1589713595162" />
+    <state width="1320" height="127" key="GridCell.Tab.0.center" timestamp="1589713595162">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1320" height="127" key="GridCell.Tab.0.center/0.31.1366.737@0.31.1366.737" timestamp="1589705350500" />
-    <state width="1320" height="127" key="GridCell.Tab.0.left" timestamp="1589705350499">
+    <state width="1320" height="127" key="GridCell.Tab.0.center/0.31.1366.737@0.31.1366.737" timestamp="1589713595162" />
+    <state width="1320" height="127" key="GridCell.Tab.0.left" timestamp="1589713595161">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1320" height="127" key="GridCell.Tab.0.left/0.31.1366.737@0.31.1366.737" timestamp="1589705350499" />
-    <state width="1320" height="127" key="GridCell.Tab.0.right" timestamp="1589705350502">
+    <state width="1320" height="127" key="GridCell.Tab.0.left/0.31.1366.737@0.31.1366.737" timestamp="1589713595161" />
+    <state width="1320" height="127" key="GridCell.Tab.0.right" timestamp="1589713595162">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1320" height="127" key="GridCell.Tab.0.right/0.31.1366.737@0.31.1366.737" timestamp="1589705350502" />
-    <state width="1320" height="216" key="GridCell.Tab.1.bottom" timestamp="1589704562275">
+    <state width="1320" height="127" key="GridCell.Tab.0.right/0.31.1366.737@0.31.1366.737" timestamp="1589713595162" />
+    <state width="1320" height="216" key="GridCell.Tab.1.bottom" timestamp="1589705828113">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1320" height="216" key="GridCell.Tab.1.bottom/0.31.1366.737@0.31.1366.737" timestamp="1589704562275" />
-    <state width="1320" height="216" key="GridCell.Tab.1.center" timestamp="1589704562274">
+    <state width="1320" height="216" key="GridCell.Tab.1.bottom/0.31.1366.737@0.31.1366.737" timestamp="1589705828113" />
+    <state width="1320" height="216" key="GridCell.Tab.1.center" timestamp="1589705828112">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1320" height="216" key="GridCell.Tab.1.center/0.31.1366.737@0.31.1366.737" timestamp="1589704562274" />
-    <state width="1320" height="216" key="GridCell.Tab.1.left" timestamp="1589704562274">
+    <state width="1320" height="216" key="GridCell.Tab.1.center/0.31.1366.737@0.31.1366.737" timestamp="1589705828112" />
+    <state width="1320" height="216" key="GridCell.Tab.1.left" timestamp="1589705828112">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1320" height="216" key="GridCell.Tab.1.left/0.31.1366.737@0.31.1366.737" timestamp="1589704562274" />
-    <state width="1320" height="216" key="GridCell.Tab.1.right" timestamp="1589704562275">
+    <state width="1320" height="216" key="GridCell.Tab.1.left/0.31.1366.737@0.31.1366.737" timestamp="1589705828112" />
+    <state width="1320" height="216" key="GridCell.Tab.1.right" timestamp="1589705828112">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1320" height="216" key="GridCell.Tab.1.right/0.31.1366.737@0.31.1366.737" timestamp="1589704562275" />
+    <state width="1320" height="216" key="GridCell.Tab.1.right/0.31.1366.737@0.31.1366.737" timestamp="1589705828112" />
     <state x="172" y="31" key="SettingsEditor" timestamp="1589433725000">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
     <state x="172" y="31" key="SettingsEditor/0.31.1366.737@0.31.1366.737" timestamp="1589433725000" />
-    <state x="278" y="138" width="810" height="531" key="Vcs.Push.Dialog.v2" timestamp="1589705411682">
+    <state x="278" y="138" width="810" height="531" key="Vcs.Push.Dialog.v2" timestamp="1589705878234">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state x="278" y="138" width="810" height="531" key="Vcs.Push.Dialog.v2/0.31.1366.737@0.31.1366.737" timestamp="1589705411682" />
+    <state x="278" y="138" width="810" height="531" key="Vcs.Push.Dialog.v2/0.31.1366.737@0.31.1366.737" timestamp="1589705878234" />
     <state x="0" y="31" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589701014978">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
     <state x="0" y="31" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.31.1366.737@0.31.1366.737" timestamp="1589701014978" />
-    <state x="486" y="157" width="394" height="492" key="refactoring.ChangeSignatureDialog" timestamp="1589692953405">
+    <state x="486" y="157" width="394" height="492" key="refactoring.ChangeSignatureDialog" timestamp="1589714172226">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state x="486" y="157" width="394" height="492" key="refactoring.ChangeSignatureDialog/0.31.1366.737@0.31.1366.737" timestamp="1589692953405" />
+    <state x="486" y="157" width="394" height="492" key="refactoring.ChangeSignatureDialog/0.31.1366.737@0.31.1366.737" timestamp="1589714172226" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1589435476231">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
