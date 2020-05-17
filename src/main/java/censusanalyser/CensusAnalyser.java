@@ -55,13 +55,14 @@ public class CensusAnalyser {
 
     public String getDensityWiseSortedCensusData() throws CensusAnalyserException {
         if (censusList == null || censusList.size() == 0) {
-            throw new CensusAnalyserException("no census data",CensusAnalyserException.ExceptionType.NO_CENSUS_DATA);
+            throw new CensusAnalyserException("No State Census Data", CensusAnalyserException.ExceptionType.NO_CENSUS_DATA);
         }
-        Comparator<IndiaCensusDAO> censusComparator =Comparator.comparing(census -> census.densityPerSqKm);
+        Comparator<IndiaCensusDAO> censusComparator = Comparator.comparing(census -> census.densityPerSqKm);
         this.sort(censusComparator);
-        String sortedStateCensusJson =new Gson().toJson(this.censusList);
-        return sortedStateCensusJson;
+        String sortedDensityCensusJson = new Gson().toJson(this.censusList);
+        return sortedDensityCensusJson;
     }
+
 
 
     public int loadIndiaStateCode(String csvFilePath) throws CensusAnalyserException, CSVBuildException {
@@ -102,8 +103,8 @@ public class CensusAnalyser {
         }
         Comparator<IndiaCensusDAO> censusComparator = Comparator.comparing(census -> census.state);
         this.sort(censusComparator);
-        String sortedStateCensusJson =new Gson().toJson(this.censusList);
-        return sortedStateCensusJson;
+        String sortedStateCensus =new Gson().toJson(this.censusList);
+        return sortedStateCensus;
     }
 
     private void sort(Comparator<IndiaCensusDAO> censusComparator) {
@@ -126,8 +127,8 @@ public class CensusAnalyser {
         }
         Comparator<IndiaCensusDAO> censusComparator =Comparator.comparing(census -> census.population);
         this.sort(censusComparator);
-        String sortedStateCensusJson =new Gson().toJson(this.censusList);
-        return sortedStateCensusJson;
+        String sortedStateCensus =new Gson().toJson(this.censusList);
+        return sortedStateCensus;
     }
 
     public String getStateCodeWiseSortedIndianStateCodeData() throws CensusAnalyserException {
@@ -137,8 +138,8 @@ public class CensusAnalyser {
         }
         Comparator<IndiaStateDAO> stateComparator =Comparator.comparing(stateCensus -> stateCensus.stateCode);
         this.sort1(stateComparator);
-        String sortedStateCodeJson =new Gson().toJson(this.stateList);
-        return sortedStateCodeJson;
+        String sortedStateCode =new Gson().toJson(this.stateList);
+        return sortedStateCode;
 
     }
 
