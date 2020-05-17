@@ -8,13 +8,19 @@ public class IndianStateCodeCsv {
     public String state;
 
     @CsvBindByName(column = "StateCode", required = true)
-    public String stateCode;
+    public String StateCode;
+
+    @CsvBindByName(column = "TIN", required = true)
+    public int tin;
+
+
 
     @Override
     public String toString() {
         return "IndianStateCodeCsv{" +
                 "state='" + state + '\'' +
-                ", stateCode='" + stateCode + '\'' +
+                ", stateCode='" + StateCode + '\'' +
+                ", tin='" + tin + '\'' +
                 '}';
     }
 }

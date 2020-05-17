@@ -13,7 +13,7 @@ public class OpenCSVBuilder <E> implements ICSVBuilder{
     }
 
     @Override
-    public List getCSVFileList(Reader reader, Class csvClass) throws CSVBuildException {
+    public List<E> getCSVFileList(Reader reader, Class csvClass) throws CSVBuildException {
             return this.getCSVBean(reader,csvClass).parse();
            }
 

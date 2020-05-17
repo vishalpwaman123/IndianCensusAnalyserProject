@@ -18,6 +18,11 @@ public class CensusAnalyserTest {
     private static final String STATES_CSV_WRONG_DELIMITER = "./src/test/resources/indiaStatesWrongDelimeter.csv";
     private static final String STATES_CSV_WRONG_HEADER_CSV_FILE="./src/test/resources/indiaStatesDataWrongHeader.csv";
 
+
+
+
+
+
     @Test
     public void givenIndianStateCsv_WhenCorrect_butTypeIncorrectShouldThrowCustomException() {
         try {
@@ -159,6 +164,21 @@ public class CensusAnalyserTest {
 
 
     }
+
+    @Test
+    public void givenIndianStateCodeCsv_whenSortedOnStateCode_shouldReturnShortedResult() {
+        try {
+            //CensusAnalyser censusAnalyser=new CensusAnalyser();
+            censusAnalyser.loadIndiaCensusData(INDIAN_STATE_CSV_FILE_PATH);
+            String sortedStateCsvData = censusAnalyser.getStateCodeWiseSortedIndianStateCodeData();
+            IndianStateCodeCsv[] stateCSV = new Gson().fromJson(sortedStateCsvData, IndianStateCodeCsv[].class);
+            Assert.assertEquals("AA",stateCSV[0].StateCode);
+        } catch (CensusAnalyserException ignored) { }
+        catch (CSVBuildException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
 
 
