@@ -6,8 +6,14 @@ import com.opencsv.bean.CsvToBeanBuilder;
 import java.io.Reader;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 public class OpenCSVBuilder <E> implements ICSVBuilder{
+
+        public Map<E,E> getCSVFileMap(Reader reader, Class csvClass) throws CSVBuildException {
+            return (Map<E, E>) this.getCSVBean(reader,csvClass).parse();
+        }
+
     public Iterator<E> getCSVFileIterator(Reader reader, Class csvClass) throws CSVBuildException {
         return this.getCSVBean(reader,csvClass).iterator();
     }
