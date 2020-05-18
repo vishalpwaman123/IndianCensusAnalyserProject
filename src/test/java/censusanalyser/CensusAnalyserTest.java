@@ -7,6 +7,7 @@ import org.junit.rules.ExpectedException;
 
 public class CensusAnalyserTest {
 
+
     CensusAnalyser censusAnalyser = new CensusAnalyser();
 
     private static final String INDIA_CENSUS_CSV_FILE_PATH = "./src/test/resources/IndiaStateCensusData.csv";
@@ -17,7 +18,7 @@ public class CensusAnalyserTest {
     private static final String CENSUS_CSV_WRONG_HEADER_CSV_FILE="./src/test/resources/indiaStateCensusWrongHeader.csv";
     private static final String STATES_CSV_WRONG_DELIMITER = "./src/test/resources/indiaStatesWrongDelimeter.csv";
     private static final String STATES_CSV_WRONG_HEADER_CSV_FILE="./src/test/resources/indiaStatesDataWrongHeader.csv";
-
+    private static final String US_CENSUS_CSV_FILE_PATH ="./src/test/resources/USCensusData.csv";
 
 
 
@@ -107,6 +108,16 @@ public class CensusAnalyserTest {
     }
 
 
+    @Test
+    public void givenUSCensusCSVFileReturnsCorrectRecords() throws CensusAnalyserException, CSVBuildException {
+        try  {
+            int numberOfRecord = censusAnalyser.loadUsCensusData(US_CENSUS_CSV_FILE_PATH);
+            Assert.assertEquals(51, numberOfRecord);
+        } catch (CensusAnalyserException e)
+        {
+
+        }
+    }
 
 
     @Test

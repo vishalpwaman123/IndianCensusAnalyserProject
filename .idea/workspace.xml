@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c80ee4f-b49f-4760-94c9-81f9af2ef2aa" name="Default Changelist" comment="Refactored. made censusCSV file length dynamic to handle multiple records.">
+    <list default="true" id="9c80ee4f-b49f-4760-94c9-81f9af2ef2aa" name="Default Changelist" comment="Rafactored. Optimize Code to handle DRY Principle.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/censusanalyser/USCensusDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/USCensusData.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -92,26 +94,7 @@
       <recent name="censusanalyser" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CensusAnalyserTest.givenIndianStateCensusCsv_whenSortedOnPopulation_shouldReturnShortedResult">
-    <configuration name="CensusAnalyserTest.givenIndiaCensusData_SortedOnState_ShouldReturnSortedResult" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;censusanalyser.CensusAnalyserTest.givenIndiaCensusData_SortedOnState_ShouldReturnSortedResult&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.CensusAnalyserTest.givenUSCensusCSVFileReturnsCorrectRecords">
     <configuration name="CensusAnalyserTest.givenIndianStateCensusCsv_whenSortedOnDensity_shouldReturnShortedResult" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -188,13 +171,32 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="CensusAnalyserTest.givenUSCensusCSVFileReturnsCorrectRecords" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;censusanalyser.CensusAnalyserTest.givenUSCensusCSVFileReturnsCorrectRecords&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CensusAnalyserTest.givenUSCensusCSVFileReturnsCorrectRecords" />
         <item itemvalue="Gradle.CensusAnalyserTest.givenIndianStateCensusCsv_whenSortedOnPopulation_shouldReturnShortedResult" />
         <item itemvalue="Gradle.CensusAnalyserTest.givenIndianStateCensusCsv_whenSortedOnStateArea_shouldReturnShortedResult" />
         <item itemvalue="Gradle.CensusAnalyserTest.givenIndianStateCensusCsv_whenSortedOnDensity_shouldReturnShortedResult" />
         <item itemvalue="Gradle.CensusAnalyserTest.givenIndianStateCodeCsv_whenSortedOnStateCode_shouldReturnShortedResult" />
-        <item itemvalue="Gradle.CensusAnalyserTest.givenIndiaCensusData_SortedOnState_ShouldReturnSortedResult" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +243,8 @@
     <MESSAGE value="Added analyser to report indian state census data in a jason format as per state dencity" />
     <MESSAGE value="Added analyser to report indian state census data in a jason format as per area" />
     <MESSAGE value="Refactored. made censusCSV file length dynamic to handle multiple records." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored. made censusCSV file length dynamic to handle multiple records." />
+    <MESSAGE value="Rafactored. Optimize Code to handle DRY Principle." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rafactored. Optimize Code to handle DRY Principle." />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="31" key="#Project_Structure" timestamp="1589700399245">
@@ -268,22 +271,22 @@
       <screen x="0" y="31" width="1366" height="737" />
     </state>
     <state x="178" y="118" width="717" height="650" key="Github.UntrackedFilesDialog/0.31.1366.737@0.31.1366.737" timestamp="1589434297972" />
-    <state width="1320" height="127" key="GridCell.Tab.0.bottom" timestamp="1589752057385">
+    <state width="1320" height="127" key="GridCell.Tab.0.bottom" timestamp="1589791357082">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1320" height="127" key="GridCell.Tab.0.bottom/0.31.1366.737@0.31.1366.737" timestamp="1589752057385" />
-    <state width="1320" height="127" key="GridCell.Tab.0.center" timestamp="1589752057380">
+    <state width="1320" height="127" key="GridCell.Tab.0.bottom/0.31.1366.737@0.31.1366.737" timestamp="1589791357082" />
+    <state width="1320" height="127" key="GridCell.Tab.0.center" timestamp="1589791357080">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1320" height="127" key="GridCell.Tab.0.center/0.31.1366.737@0.31.1366.737" timestamp="1589752057380" />
-    <state width="1320" height="127" key="GridCell.Tab.0.left" timestamp="1589752057376">
+    <state width="1320" height="127" key="GridCell.Tab.0.center/0.31.1366.737@0.31.1366.737" timestamp="1589791357080" />
+    <state width="1320" height="127" key="GridCell.Tab.0.left" timestamp="1589791357079">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1320" height="127" key="GridCell.Tab.0.left/0.31.1366.737@0.31.1366.737" timestamp="1589752057376" />
-    <state width="1320" height="127" key="GridCell.Tab.0.right" timestamp="1589752057382">
+    <state width="1320" height="127" key="GridCell.Tab.0.left/0.31.1366.737@0.31.1366.737" timestamp="1589791357079" />
+    <state width="1320" height="127" key="GridCell.Tab.0.right" timestamp="1589791357081">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1320" height="127" key="GridCell.Tab.0.right/0.31.1366.737@0.31.1366.737" timestamp="1589752057382" />
+    <state width="1320" height="127" key="GridCell.Tab.0.right/0.31.1366.737@0.31.1366.737" timestamp="1589791357081" />
     <state width="1320" height="216" key="GridCell.Tab.1.bottom" timestamp="1589705828113">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
@@ -304,14 +307,18 @@
       <screen x="0" y="31" width="1366" height="737" />
     </state>
     <state x="172" y="31" key="SettingsEditor/0.31.1366.737@0.31.1366.737" timestamp="1589433725000" />
-    <state x="278" y="138" width="810" height="531" key="Vcs.Push.Dialog.v2" timestamp="1589750957338">
+    <state x="278" y="138" width="810" height="531" key="Vcs.Push.Dialog.v2" timestamp="1589753425860">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state x="278" y="138" width="810" height="531" key="Vcs.Push.Dialog.v2/0.31.1366.737@0.31.1366.737" timestamp="1589750957338" />
+    <state x="278" y="138" width="810" height="531" key="Vcs.Push.Dialog.v2/0.31.1366.737@0.31.1366.737" timestamp="1589753425860" />
     <state x="0" y="31" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589701014978">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
     <state x="0" y="31" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.31.1366.737@0.31.1366.737" timestamp="1589701014978" />
+    <state x="125" y="31" width="620" height="737" key="find.popup" timestamp="1589782848240">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state x="125" y="31" width="620" height="737" key="find.popup/0.31.1366.737@0.31.1366.737" timestamp="1589782848240" />
     <state x="486" y="157" width="394" height="492" key="refactoring.ChangeSignatureDialog" timestamp="1589753398181">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
@@ -326,7 +333,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/censusanalyser/CensusAnalyserTest.java</url>
-          <line>170</line>
+          <line>181</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

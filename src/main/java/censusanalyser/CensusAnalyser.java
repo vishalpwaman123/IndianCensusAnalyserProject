@@ -1,8 +1,6 @@
 package censusanalyser;
 
 import com.google.gson.Gson;
-import com.opencsv.bean.CsvToBean;
-import com.opencsv.bean.CsvToBeanBuilder;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -13,12 +11,17 @@ import java.util.stream.StreamSupport;
 
 public class CensusAnalyser {
 
+    List<IndiaCensusDAO> csvFileList;
     List<IndiaStateDAO> stateList;
     List<IndiaCensusDAO> censusList;
     Map<Integer,IndiaCensusDAO> censusMap;
+    Map<String, USCensusDAO> censusCSVMap;
+    Map<String, IndianStateCodeCsv> stateCSVMap;
+    Iterator<USCensusCSV> csvIterator;
 
     public CensusAnalyser() {
 
+        this.csvFileList = new ArrayList<IndiaCensusDAO>();
         this.censusList = new ArrayList<>();
         this.stateList=new ArrayList<>();
         this.censusMap=new HashMap<>();
@@ -39,6 +42,25 @@ public class CensusAnalyser {
         } catch (CSVBuildException e) {
             throw new CSVBuildException(e.getMessage(),e.type.name());
         }
+    }
+
+
+    public int loadUsCensusData(String csvFilePath) throws CensusAnalyserException, CSVBuildException {
+
+        try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath));){
+            ICSVBuilder csvBuilder= CSVBuilderFactor.createCSVBuilder();
+            Iterator<USCensusCSV> csvFileIterator = csvBuilder.getCSVFileIterator(reader, IndiaCensusCSV.class);
+            Iterable<USCensusCSV> csvIterable = () -> csvIterator;
+            StreamSupport.stream(csvIterable.spliterator(),false).
+                    forEach(censusCSV -> censusCSVMap.put(censusCSV.state,new USCensusDAO(censusCSV)));
+            return this.censusCSVMap.size();
+        } catch (IOException e) {
+            throw new CensusAnalyserException(e.getMessage(),
+                    CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
+        } catch (CSVBuildException e) {
+            throw new CSVBuildException(e.getMessage(),e.type.name());
+        }
+
     }
 
 
@@ -156,6 +178,8 @@ public class CensusAnalyser {
             }
         }
     }
+
+
 }
 
 
